@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS DXC (
  EMAIL TEXT
 );
 
+-- inserting sample data
 INSERT INTO DXC (EMP_ID, NAME, GENDER, POSITION, DEPT_ID, EMAIL) VALUES
 ('E1001', 'Tarun Mohamed', 'M', 'HR Manager', 'D001','tarun.m@example.com'),
 ('E1002', 'Rishan Ibrahim', 'M', 'Accountant', 'D002', 'rishan.i@example.com'),
