@@ -1,0 +1,29 @@
+-- create table if not exists
+CREATE TABLE IF NOT EXISTS EMPLOYEES (
+ EMP_ID TEXT PRIMARY KEY,
+ NAME TEXT,
+ GENDER TEXT,
+ POSITION TEXT,
+ DEPT_ID TEXT,
+ SALARY REAL
+);
+
+-- inserting sample data
+INSERT INTO EMPLOYEES (EMP_ID, NAME, GENDER, POSITION, DEPT_ID, SALARY) VALUES
+('E1001', 'Tarun Mohamed', 'M', 'HR Manager', 'D001',30000),
+('E1002', 'Rishan Ibrahim', 'M', 'Accountant', 'D002', 24000),
+('E1003', 'Zoya Zulaal', 'F', 'Software Engineer', 'D003', 36000),
+('E1004', 'Namika Latheef', 'F', 'Frontend Developer', 'D003', 24000),
+('E1005', 'Hassan RashId', 'M', 'Sales Executive', 'D004', 18000),
+('E1007', 'Ismail Younus', 'M', 'Logistics Coordinator', 'D005', 24000);
+
+SELECT * FROM EMPLOYEES;
+
+SELECT COUNT(DISTINCT DEPT_ID) AS 'NUMBER OF DEPARTMENTS'
+FROM EMPLOYEES;
+
+SELECT SUM(SALARY) AS 'TOTAL SALARY',
+AVG(SALARY) AS 'AVERAGE SALARY',
+MIN(SALARY) AS 'MINIMUM SALARY',
+MAX(SALARY) AS 'MAXIMUM SALARY'
+FROM EMPLOYEES;
